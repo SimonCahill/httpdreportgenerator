@@ -131,24 +131,24 @@ void printHelp() {
     using namespace httpdreport::resources;
     cout << format(
 R"(
-    {0:s}
-    Usage:
-        {1:s} # normal execution, must be run as root
-        {1:s} [input files] # define input files
-        {1:s} [-options]
+{0:s}
+Usage:
+    {1:s} # normal execution, must be run as root
+    {1:s} [input files] # define input files
+    {1:s} [-options]
 
-    Switches:
-        --help,     -h              Prints this text and exits
-        --version,  -v              Prints the version information and exits
-        --stdin,    -s              Read from stdin instead of searching for logs under {2:s}
-        --gzip,     -g              Allow reading from gzip-compressed files
-        --follow,   -F              Follow symlinks
-        --recurse,  -R/r            Recurse through subdirectories
+Switches:
+    --help,     -h              Prints this text and exits
+    --version,  -v              Prints the version information and exits
+    --stdin,    -s              Read from stdin instead of searching for logs under {2:s}
+    --gzip,     -g              Allow reading from gzip-compressed files
+    --follow,   -F              Follow symlinks
+    --recurse,  -R/r            Recurse through subdirectories
 
-    Arguments:
-        --access,   -a[glob]        Set the glob pattern for access log files. Default: {3:s}
-        --error,    -e[glob]        Set the glob pattern for error log files. Default: {4:s}
-        --output,   -o[file]        Set the output file (otherwise stdout is used)
+Arguments:
+    --access,   -a[glob]        Set the glob pattern for access log files. Default: {3:s}
+    --error,    -e[glob]        Set the glob pattern for error log files. Default: {4:s}
+    --output,   -o[file]        Set the output file (otherwise stdout is used)
 
 )", APP_DESCRIPTION, APP_NAME, DEFAULT_LOG_PATH, DEFAULT_APPOPTS.AccessFileGlob, DEFAULT_APPOPTS.ErrorFileGlob) << endl;
 }
